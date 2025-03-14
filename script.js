@@ -29,7 +29,7 @@ function addLista(x){
         else{
 
             lst[0].push(x);
-            console.log(lst[0])
+            
             mostrarNaTela(lst[0], operador, lst[2]);
         
         }
