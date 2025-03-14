@@ -8,6 +8,7 @@ let n1 = "",
     inicio = false,
     lst = [[""],operador,[""]];
     tamanho = 0;
+
 function addLista(x){
 
     var t1 = lst[0].length;
@@ -29,7 +30,7 @@ function addLista(x){
         else{
 
             lst[0].push(x);
-            
+
             mostrarNaTela(lst[0], operador, lst[2]);
         
         }
@@ -263,8 +264,6 @@ function zerar(){
 
         if (operacao){
 
-            console.log(lst[1].length ,lst[2].length)
-
             if (operacao && lst[2].length == 1){
 
                 operador = ""
@@ -298,9 +297,8 @@ function zerar(){
             }
             else{
 
-                console.log(operador)
                 lst[0].pop();
-                console.log(lst[0])
+
                 mostrarNaTela(lst[0], operador, lst[2]);
 
             }
