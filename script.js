@@ -7,25 +7,35 @@ let n1 = "",
     decimal = false,
     inicio = false,
     lst = [[""],operador,[""]];
-
+    tamanho = 0;
 function addLista(x){
 
-    inicio = true;
+    var t1 = lst[0].length;
+    var t2 = lst[2].length;
 
-    if (operacao){
-    
-        lst[2].push(x);
+    tamanho = t1 + 1 + t2;
+
+    if (tamanho <= 15){
+
+        inicio = true;
+
+        if (operacao){
         
-        mostrarNaTela(lst[0], operador, lst[2]);
+            lst[2].push(x);
+            
+            mostrarNaTela(lst[0], operador, lst[2]);
+        
+        }
+        else{
+
+            lst[0].push(x);
+            console.log(lst[0])
+            mostrarNaTela(lst[0], operador, lst[2]);
+        
+        }
     
     }
-    else{
 
-        lst[0].push(x);
-        
-        mostrarNaTela(lst[0], operador, lst[2]);
-    
-    }
 }
 function mostrarNaTela(x, y, z){
 
