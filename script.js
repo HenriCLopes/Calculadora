@@ -29,10 +29,25 @@ function addLista(x){
         }
         else{
 
-            lst[0].push(x);
+            if (lst[0][1] == "0"){
 
-            mostrarNaTela(lst[0], operador, lst[2]);
-        
+                console.log("funcionou")
+
+                lst[0].pop(1);
+                
+                lst[0].push(x);
+
+                mostrarNaTela(lst[0], operador, lst[2]);
+
+            }
+            else{
+
+                lst[0].push(x);
+
+                mostrarNaTela(lst[0], operador, lst[2]);
+
+            }
+           
         }
     
     }
@@ -105,14 +120,14 @@ function escOperação(x){
 }
 function pegarOperador(x){
 
-    if (x == "-" && operacao == false){
+    if (x == "-" && operacao == false && lst[0].length == 1){
 
         lst[0].unshift(x);
 
         mostrarNaTela(lst[0], operador, lst[2]);
 
     }
-    if (inicio){
+    else if (inicio){
 
         if(operacao){
 
@@ -138,19 +153,40 @@ function pegarOperador(x){
 }
 function posCalculo(x){
 
-    var lista = String(x).split("");
+    if (x == "Indefinido"){
+
+        lst[0].pop(1)
+
+        operador = " ";
+
+        lst = [lst[0], operador,[""]]
+        
+        decimal = false;
+
+        operacao = false;
+
+        document.getElementById("resultado").innerHTML = "Indefinido";
+
+        inicio = false;
+
+    }
+    else{
+
+        var lista = String(x).split("");
     
-    lista.unshift(" ");
+        lista.unshift(" ");
 
-    operador = " ";
+        operador = " ";
 
-    lst = [lista, operador,[""]]
-    
-    decimal = false;
+        lst = [lista, operador,[""]]
+        
+        decimal = false;
 
-    operacao = false;
+        operacao = false;
+        
+        document.getElementById("resultado").innerHTML = x;
 
-    document.getElementById("resultado").innerHTML = x;
+    }
 
 }
 function calculo(){
@@ -183,13 +219,23 @@ function calculo(){
         }
         else if (operador == "/"){
 
-            resultado = n1 / n2;
+            if (n2 == 0){
 
-            posCalculo(resultado);
+                resultado = "Indefinido";
+
+                posCalculo(resultado);
+
+            }
+            else{
+
+                resultado = n1 / n2;
+
+                posCalculo(resultado);
+                
+            }
 
         }
         else if (operador == "%"){
-
 
             resultado = n1 % n2;
 
