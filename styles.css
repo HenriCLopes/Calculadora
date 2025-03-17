@@ -1,13 +1,43 @@
-body{
+#fundo{
     font-family: Arial, Helvetica, sans-serif;
-    height: 100vh;
+    margin: 0%;
     background: linear-gradient(45deg, red, yellow, green, blue);
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
-    display: grid;
-    place-items: center;
-    margin: 0%;
+    height: 100vh;
+    display: flex;
+
+}
+#lugardafrase{
+    background-color: aliceblue;
+    border-radius: 0 0 25px 0;
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    width: 280px;
+    text-align: center;
+    height: 100px;
+
+}
+#frase{
+    font-size: 22px;
+    font-weight: 500;
+    background-color: antiquewhite;
+    padding: 15px;
+    border-radius:25px;
+    margin: auto;
+    width: 210px;
+    margin-top: 8px;
+    box-shadow: inset 0 0 7px 0px rgb(47, 47, 47);
+    color: rgb(47, 47, 47);
+
+}
+#lugardobtn{
+    width: 150px;
+    height: 75px;
+    background-color: aliceblue;
+    border-radius: 0 0 0 25px;
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    margin-left: 115px;
 }
 #calculadora{
     background-color: aliceblue;
@@ -17,6 +47,7 @@ body{
     box-shadow:  0 0 20px 0px rgb(47, 47, 47);
     display: grid;
     place-items: center;
+    margin: auto;
 }
 #tela{
     background-color: lightblue;
@@ -37,29 +68,9 @@ body{
 #botoes{
     display: flex;
 }
-.b0{
+#b0{
     width: 100%;
     background-color: antiquewhite;
-}
-.operacoes1{
-    height: 250%;
-    background-color: rgb(214, 214, 214);
-}
-.operacoes{
-    height: 100%;
-    background-color: rgb(214, 214, 214);
-}
-.bac{
-    color: aliceblue;
-    background-color: rgb(47, 47, 47);
-}
-#botoes div div{
-    display: flex;
-}
-.num{
-    background-color: antiquewhite;
-}
-button{
     transition: 300ms;
     border-radius: 25px;
     border: 0;
@@ -67,19 +78,136 @@ button{
     padding: 25px;
     font-size: large;
 }
-button:hover{
+#b0:hover{
     box-shadow:  0 0 20px 0px rgb(47, 47, 47);
     transition: 300ms;
     padding: 28px;
     margin: 2px;
-
-
+    cursor: pointer;
 }
-button:active{
+#b0:active{
     transition: 300ms;
     border-radius: 25px;
     border: 0;
     margin: 5px;
     padding: 25px;
+}
+#operacoes1{
+    height: 250%;
+    background-color: rgb(214, 214, 214);
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+    font-size: large;
+}
+#operacoes1:hover{
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    transition: 300ms;
+    padding: 28px;
+    margin: 2px;
+    cursor: pointer;
+}
+#operacoes1:active{
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+}
+#operacoes{
+    height: 100%;
+    background-color: rgb(214, 214, 214);
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+    font-size: large;
+}
+#operacoes:hover{
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    transition: 300ms;
+    padding: 28px;
+    margin: 2px;
+    cursor: pointer;
+}
+#operacoes:active{
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+}
+#bac{
+    color: aliceblue;
+    background-color: rgb(47, 47, 47);
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+    font-size: large;
+}
+#bac:hover{
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    transition: 300ms;
+    padding: 28px;
+    margin: 2px;
+    cursor: pointer;
+}
+#bac:active{
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+}
+#botoes div div{
+    display: flex;
+}
+#num{
+    background-color: antiquewhite;
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+    font-size: large;
+}
+#num:hover{
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    transition: 300ms;
+    padding: 28px;
+    margin: 2px;
+    cursor: pointer;
+}
+#num:active{
+    transition: 300ms;
+    border-radius: 25px;
+    border: 0;
+    margin: 5px;
+    padding: 25px;
+}
+#tema{
+    background-color: rgb(47, 47, 47);
+    box-shadow:  0 0 20px 0px rgb(47, 47, 47);
+    border-radius: 25px;
+    width: 70px;
+    height: 35px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#slide{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 35px;
+    border: 0;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    width: 25px;
+    height: 25px;
+    transition: 600ms;
 
 }

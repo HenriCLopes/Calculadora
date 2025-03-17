@@ -5,7 +5,10 @@
         <title>Super Calculadora</title>
         <link rel="stylesheet" href="styles.css" type="text/css">
     </head>
-    <body>
+    <body id="fundo">
+        <div id="lugardafrase">
+            <h2 id="frase">Tente usar o teclado ;)</h2>
+        </div>
         <div id="calculadora">
             <div id="tela">
                 <p id="resultado">0</p>
@@ -14,35 +17,40 @@
                 <div>
                     <div>
                         <div id="linha">
-                            <button id="bac" class="bac" onclick="zerar()">AC</button>
-                            <button id="n7" class="num" onclick="addLista(7)">7</button>
-                            <button id="n4" class="num" onclick="addLista(4)">4</button>
-                            <button id="n1" class="num" onclick="addLista(1)">1</button>
+                            <button id="bac" onclick="zerar()">AC</button>
+                            <button id="num" onclick="addLista(7)">7</button>
+                            <button id="num" onclick="addLista(4)">4</button>
+                            <button id="num" onclick="addLista(1)">1</button>
                         </div>
                         <div id="linha">
-                            <button id="bporc" class="operacoes" onclick="pegarOperador('%')">%</button>
-                            <button id="n8" class="num" onclick="addLista(8)">8</button>
-                            <button id="n5" class="num" onclick="addLista(5)">5</button>
-                            <button id="n2" class="num" onclick="addLista(2)">2</button>
+                            <button id="operacoes" onclick="pegarOperador('%')">%</button>
+                            <button id="num" onclick="addLista(8)">8</button>
+                            <button id="num" onclick="addLista(5)">5</button>
+                            <button id="num" onclick="addLista(2)">2</button>
                         </div>
                     </div>
                     <div>
-                        <button id="n0" class="b0" onclick="addLista(0)">0</button>
+                        <button id="b0" onclick="addLista(0)">0</button>
                     </div>
                 </div>
                 <div id="linha">
-                    <button id="bd" class="operacoes" onclick="pegarOperador('/')">/</button>
-                    <button id="n9" class="num" onclick="addLista(9)">9</button>
-                    <button id="n6" class="num" onclick="addLista(6)">6</button>
-                    <button id="n3" class="num" onclick="addLista(3)">3</button>
-                    <button id="bpont" class="operacoes" onclick="tornarDecimal('.')">.</button>
+                    <button id="operacoes" onclick="pegarOperador('/')">/</button>
+                    <button id="num" onclick="addLista(9)">9</button>
+                    <button id="num" onclick="addLista(6)">6</button>
+                    <button id="num" onclick="addLista(3)">3</button>
+                    <button id="operacoes" onclick="tornarDecimal('.')">.</button>
                 </div>
                 <div id="linha">
-                    <button id="bmulti" class="operacoes" onclick="pegarOperador('x')">x</button>
-                    <button id="bsub" class="operacoes" onclick="pegarOperador('-')">-</button>
-                    <button id="badi" class="operacoes1" onclick="pegarOperador('+')">+</button>
-                    <button id="bigual" class="operacoes1" onclick="calculo()">=</button>
+                    <button id="operacoes" onclick="pegarOperador('x')">x</button>
+                    <button id="operacoes" onclick="pegarOperador('-')">-</button>
+                    <button id="operacoes1" onclick="pegarOperador('+')">+</button>
+                    <button id="operacoes1" onclick="calculo()">=</button>
                 </div>
+            </div>
+        </div>
+        <div id="lugardobtn">
+            <div id="tema">
+                <button id="slide" onclick="mudarTema()"></button>
             </div>
         </div>
         <script src="script.js"></script> 
